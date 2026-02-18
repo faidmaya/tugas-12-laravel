@@ -1,11 +1,17 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\FormController;
+use Illuminate\Http\Request;
 
 Route::get('/', function () {
-    return view('home');
+    return view('dashboard');
 });
 
-Route::get('/register', [FormController::class, 'index']);
-Route::post('/welcome', [FormController::class, 'welcome']);
+Route::get('/register', function () {
+    return view('register');
+});
+
+Route::post('/welcome', function (Request $request) {
+    $nama = $request->first_name . ' ' . $request->last_name;
+    return view('welcome', compact('nama'));
+});

@@ -1,13 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Welcome</title>
-</head>
-<body>
+@extends('layouts.master')
 
-<h1>Selamat Datang {{ $first_name }} {{ $last_name }}</h1>
+@section('content')
+<div class="card">
+  <div class="card-body">
+    <h2>Dashboard</h2>
 
-<h3>Terima kasih telah bergabung di SanberBook. Social Media kita bersama!</h3>
-
-</body>
-</html>
+    <h1>Selamat Datang {{ $nama }}</h1>
+    <h3>
+        Terima kasih telah bergabung di Sanberbook.
+        Social Media kita bersama!
+    </h3>
+  </div>
+</div>
+@endsection
