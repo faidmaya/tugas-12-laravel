@@ -42,23 +42,33 @@
       <nav class="sidebar-nav scroll-sidebar">
         <ul id="sidebarnav">
 
+          <!-- HOME -->
           <li class="nav-small-cap">
             <span class="hide-menu">HOME</span>
           </li>
-
           <li class="sidebar-item">
-            <a class="sidebar-link" href="/">
+            <a class="sidebar-link" href="{{ url('/') }}">
               <span class="hide-menu">Dashboard</span>
             </a>
           </li>
 
+          <!-- FORM -->
           <li class="nav-small-cap">
             <span class="hide-menu">FORM</span>
           </li>
-
           <li class="sidebar-item">
-            <a class="sidebar-link" href="/register">
+            <a class="sidebar-link" href="{{ url('/register') }}">
               <span class="hide-menu">Form Input</span>
+            </a>
+          </li>
+
+          <!-- MASTER -->
+          <li class="nav-small-cap">
+            <span class="hide-menu">MASTER</span>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="{{ route('categories.index') }}">
+              <span class="hide-menu">Category</span>
             </a>
           </li>
 
